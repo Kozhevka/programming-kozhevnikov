@@ -41,7 +41,7 @@ int main()
 	struct animal animals[ANIMAL_COUNT];
 
 	for (unsigned int i = 0; i < ANIMAL_COUNT; i++) {
-		generate_animal(&animals[i]);
+		generate_animal(&animals[i], i);
 	}
 	show_animals(animals, ANIMAL_COUNT);
 

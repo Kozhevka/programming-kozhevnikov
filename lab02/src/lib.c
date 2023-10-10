@@ -25,17 +25,20 @@ const char *get_animal_type_name(enum animal_type type)
 	case PIG:
 		result = "Pig";
 		break;
+	case HUMAN:
+		result = "Human";
+		break;
 	default:
 		result = "N/A";
 	}
 	return result;
 }
 
-void generate_animal(struct animal *entity)
+void generate_animal(struct animal *entity, unsigned int index_in_enum)
 {
 	entity->height = (unsigned int)random() % INT8_MAX;
 	entity->weight = (unsigned int)random() % INT8_MAX;
-	entity->type = (unsigned int)random() % ANIMAL_TYPE_COUNT;
+	entity->type = (unsigned int)index_in_enum;
 }
 
 void show_animals(struct animal animals[], unsigned int count)

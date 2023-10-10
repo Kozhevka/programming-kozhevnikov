@@ -19,7 +19,7 @@
 /**
  * Кількість тварин у масиві
  */
-#define ANIMAL_COUNT 10
+#define ANIMAL_COUNT 5
 
 /**
  * Тип тварини
@@ -29,7 +29,7 @@ enum animal_type {
 	COW, /**< Корова */
 	DOG, /**< Собака */
 	CAT, /**< Кіт */
-	ANIMAL_TYPE_COUNT /**< Кількість тварин */
+	HUMAN, /** Lydina */
 };
 
 /**
@@ -54,7 +54,7 @@ const char *get_animal_type_name(enum animal_type type);
  * Функція генерує та повертає тварину з випадковими значеннями її полів
  * @param entity структура {@link animal} для заповнення
  */
-void generate_animal(struct animal *entity);
+void generate_animal(struct animal *entity, unsigned int index_in_enum);
 
 /**
  * Вивід до екрану вмісту масиву з даними про тварини.
