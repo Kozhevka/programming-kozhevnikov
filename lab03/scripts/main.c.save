@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+
+int main()
+{
+    double number1, number2;
+
+    printf("Введите первое число: ");
+    scanf("%lf", &number1);
+
+    printf("Введите второе число: ");
+    scanf("%lf", &number2);
+
+    printf("Вы ввели первое число: %lf\n", number1);
+    printf("Вы ввели второе число: %lf\n", number2);
+
+    return 0;
+}
