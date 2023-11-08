@@ -1,6 +1,7 @@
 
 #include <stdio.h>
 int numberInput(const char* message);
+int calculateSumInRange(int a, int b);
 
 
 int main()
@@ -23,12 +24,7 @@ int main()
         start = number1;
     }
 
-    int result = 0;
-
-    for (int i = start; i <= end; ++i)
-    {
-        result += i;
-    }
+    int result = calculateSumInRange(start, end);
     
     printf("Сума чисел у діапазоні від %d до %d, дорівнює: %d\n", start, end, result);
     return 0;
@@ -51,4 +47,9 @@ int numberInput(const char* message)
     }
 
     return result;
+}
+
+int calculateSumInRange(int a, int b)
+{
+    return (a+b) * (b-a+1)/2;
 }
