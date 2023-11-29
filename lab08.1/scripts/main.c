@@ -1,3 +1,14 @@
+/**
+* @file main.c
+* @brief Основний скрипт-файл який містить у собі функція, яко визначає, скільки
+ * серед заданої послідовності чисел таких пар, у котрих перше число менше наступного.
+*
+* @author Kozhevnikov I.
+* @date 29-nov-2020
+* @version 1.3
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -5,7 +16,6 @@
 
 
 int getRandom();
-
 int taskFunction(int number);
 int getNumberDigitsCount(int number);
 
@@ -13,13 +23,17 @@ int combineArrayToInt(int* numbersArray, int arraySize);
 char * numberToCharArray(int* numbersArray);
 int * numberToIntArray(int number, int numberMaxSize);
 
-/// Масиви рядків для словесного представлення чисел
+// Масиви рядків для словесного представлення чисел
 char *units[] = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
 char *teens[] = {"", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"};
 char *tens[] = {"", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"};
 char *hundreds[] = {"hundred", "thousand"};
 
-int main() /// Головна функція
+
+/**
+ * Функція запуску
+ */
+int main() ///
 {
 #define maxNumbersCount 4
 
@@ -43,7 +57,16 @@ int main() /// Головна функція
     return 0;
 }
 
-int taskFunction(int number) ///Функція, що визначає, скільки серед заданої послідовності чисел таких пар, у котрих перше число менше наступного
+
+/**
+ * @brief taskFunction.
+ *
+ * Функція, що визначає, скільки серед заданої послідовності чисел таких пар, у котрих перше число менше наступного.
+ *
+ * @param number Заданий номер.
+ * @return lessNumber next iteration count.
+ */
+int taskFunction(int number)
 {
     int arraySize = getNumberDigitsCount(number);
     int *numberArray = numberToIntArray(number, arraySize);
@@ -65,7 +88,15 @@ int taskFunction(int number) ///Функція, що визначає, скіл�
     return counter;
 }
 
-int getNumberDigitsCount(int number) /// Get digits count from number
+/**
+ * @brief getNumberDigitsCount.
+ *
+ * Функція, яка визначає кількість чисел у номері
+ *
+ * @param number Заданий номер.
+ * @return кількість чисел у заданому номері.
+ */
+int getNumberDigitsCount(int number)
 {
     int arraySize = 0;
 
@@ -79,8 +110,16 @@ int getNumberDigitsCount(int number) /// Get digits count from number
     return arraySize;
 }
 
-
-int combineArrayToInt(int* numbersArray, int arraySize) /// Масив чисел перетворити у число
+/**
+ * @brief combineArrayToInt.
+ *
+ * Функція, яка перетворює масив чисел у номер
+ *
+ * @param numbersArray Заданий номер у вигляді масиву чисел.
+ * @param arraySize Розмір переданого масиву.
+ * @return Номер перетворений з масиву.
+ */
+int combineArrayToInt(int* numbersArray, int arraySize)
 {
     int result = 0;
 
@@ -98,8 +137,14 @@ int combineArrayToInt(int* numbersArray, int arraySize) /// Масив чисе�
     return result;
 }
 
-
-int getRandom() ///Генерація сіду для  рандому на основі часу (щоб результат random не був завжди однаковий)
+/**
+ * @brief Функція для генерації рандому.
+ *
+ * Функція, яка генерує сід для  рандому на основі часу (щоб результат random не був завжди однаковий).
+ *
+ * @return Сід рандому.
+ */
+int getRandom()
 {
     srand((unsigned int)time(NULL));
 
@@ -108,7 +153,17 @@ int getRandom() ///Генерація сіду для  рандому на ос�
     return result;
 }
 
-int * numberToIntArray(int number, int numberMaxSize) /// get digits array from number.
+/**
+ * @brief number => number[].
+ *
+ * Функція, яка перетворює номер у масив чисел.
+ *
+ * @param number Заданий номер.
+ * @param numberMaxSize Максимальний розмір числа.
+ *
+ * @return Масив чисел з отриманого номеру.
+ */
+int * numberToIntArray(int number, int numberMaxSize)
 {
     if (numberMaxSize == 0) //get current number digits count.
     {
@@ -126,7 +181,16 @@ int * numberToIntArray(int number, int numberMaxSize) /// get digits array from 
     return resultInt;
 }
 
-char * numberToCharArray(int* numberArray) /// Отримати число у вигляді слів.
+/**
+ * @brief int number => char[] number.
+ *
+ * Функція, яка перетворює числовий номер у строчний номер.
+ *
+ * @param numberArray Заданий номер.
+ *
+ * @return Номер у словесному вигляді.
+ */
+char * numberToCharArray(int* numberArray)
 {
     char result[100] = ""; // Рядок для зберігання словесного представлення числа
 
