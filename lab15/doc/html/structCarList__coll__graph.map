@@ -1,0 +1,4 @@
+<map id="CarList" name="CarList">
+<area shape="rect" id="node1" title="Структура для зберігання динамічного масиву автомобілів." alt="" coords="5,95,72,121"/>
+<area shape="rect" id="node2" href="$structCar.html" title="Структура для зберігання інформації про автомобіль." alt="" coords="17,5,61,32"/>
+</map>

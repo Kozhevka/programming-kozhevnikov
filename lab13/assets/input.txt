@@ -1,0 +1,1 @@
+echo "./test_directory" > assets/input.txt

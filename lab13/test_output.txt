@@ -1,0 +1,27 @@
+output.txt
+Makefile
+assets/
+    output.txt
+    input.txt
+    output_test.txt
+test_directory/
+    subdir2/
+        file3.txt
+    file1.txt
+    subdir1/
+        file2.txt
+src/
+    main.c
+    main.o
+    lib.h
+    lib.o
+    lib.c
+test_output.txt
+test/
+    test.o
+    test.c
+Doxyfile
+README.md
+bin/
+    main
+    test

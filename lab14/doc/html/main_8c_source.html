@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab 14: Структуровані типи даних: Текст програми src/main.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lab 14: Структуровані типи даних
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота, що демонструє роботу з структурованими типами даних у C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">main.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main_8c.html">Див. документацію.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="lib_8h.html">lib.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">   13</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[]) {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordflow">if</span> (argc != 2) {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        printf(<span class="stringliteral">&quot;Usage: %s &lt;input file&gt;\n&quot;</span>, argv[0]);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="structCar.html">Car</a> cars[100];</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> count;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="lib_8c.html#ac846a5938885f50c0053d034a90c306f">readData</a>(argv[1], cars, &amp;count);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="lib_8c.html#a7516c48be04a5fe03e0da6a44328e0ab">printData</a>(cars, count);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    printf(<span class="stringliteral">&quot;\nSearching for brand &#39;Ford&#39;:\n&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="lib_8c.html#a7bf2395b8f2982851088940cb44e696b">searchByBrand</a>(cars, count, <span class="stringliteral">&quot;Ford&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    printf(<span class="stringliteral">&quot;\nSorting cars by price:\n&quot;</span>);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="lib_8c.html#aa7b6c1858a1142b9f268d3e106246ea1">sortCarsByPrice</a>(cars, count);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="lib_8c.html#a7516c48be04a5fe03e0da6a44328e0ab">printData</a>(cars, count);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="lib_8c.html#a8e63ac47ddf2370d95d0f308b9019103">writeDataBinary</a>(<span class="stringliteral">&quot;cars.bin&quot;</span>, cars, count);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="structCar.html">Car</a> carsFromBinary[100];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> countFromBinary;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="lib_8c.html#ac546f0aa3d0b07516f309f10782a0b99">readDataBinary</a>(<span class="stringliteral">&quot;cars.bin&quot;</span>, carsFromBinary, &amp;countFromBinary);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    printf(<span class="stringliteral">&quot;\nData read from binary file:\n&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="lib_8c.html#a7516c48be04a5fe03e0da6a44328e0ab">printData</a>(carsFromBinary, countFromBinary);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="ttc" id="alib_8c_html_a7516c48be04a5fe03e0da6a44328e0ab"><div class="ttname"><a href="lib_8c.html#a7516c48be04a5fe03e0da6a44328e0ab">printData</a></div><div class="ttdeci">void printData(Car *cars, int count)</div><div class="ttdoc">Виводить дані на екран</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00051">lib.c:51</a></div></div>
+<div class="ttc" id="alib_8c_html_a7bf2395b8f2982851088940cb44e696b"><div class="ttname"><a href="lib_8c.html#a7bf2395b8f2982851088940cb44e696b">searchByBrand</a></div><div class="ttdeci">void searchByBrand(Car *cars, int count, const char *brand)</div><div class="ttdoc">Шукає автомобілі за маркою</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00064">lib.c:64</a></div></div>
+<div class="ttc" id="alib_8c_html_a8e63ac47ddf2370d95d0f308b9019103"><div class="ttname"><a href="lib_8c.html#a8e63ac47ddf2370d95d0f308b9019103">writeDataBinary</a></div><div class="ttdeci">void writeDataBinary(const char *filename, Car *cars, int count)</div><div class="ttdoc">Записує дані у бінарний файл</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00115">lib.c:115</a></div></div>
+<div class="ttc" id="alib_8c_html_aa7b6c1858a1142b9f268d3e106246ea1"><div class="ttname"><a href="lib_8c.html#aa7b6c1858a1142b9f268d3e106246ea1">sortCarsByPrice</a></div><div class="ttdeci">void sortCarsByPrice(Car *cars, int count)</div><div class="ttdoc">Сортує автомобілі за ціною</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00091">lib.c:91</a></div></div>
+<div class="ttc" id="alib_8c_html_ac546f0aa3d0b07516f309f10782a0b99"><div class="ttname"><a href="lib_8c.html#ac546f0aa3d0b07516f309f10782a0b99">readDataBinary</a></div><div class="ttdeci">void readDataBinary(const char *filename, Car *cars, int *count)</div><div class="ttdoc">Читає дані з бінарного файлу</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00132">lib.c:132</a></div></div>
+<div class="ttc" id="alib_8c_html_ac846a5938885f50c0053d034a90c306f"><div class="ttname"><a href="lib_8c.html#ac846a5938885f50c0053d034a90c306f">readData</a></div><div class="ttdeci">void readData(const char *filename, Car *cars, int *count)</div><div class="ttdoc">Читає дані з текстового файлу</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00013">lib.c:13</a></div></div>
+<div class="ttc" id="alib_8h_html"><div class="ttname"><a href="lib_8h.html">lib.h</a></div></div>
+<div class="ttc" id="amain_8c_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdoc">Головна функція програми</div><div class="ttdef"><b>Definition:</b> <a href="main_8c_source.html#l00013">main.c:13</a></div></div>
+<div class="ttc" id="astructCar_html"><div class="ttname"><a href="structCar.html">Car</a></div><div class="ttdoc">Структура, що представляє автомобіль</div><div class="ttdef"><b>Definition:</b> <a href="lib_8h_source.html#l00007">lib.h:7</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

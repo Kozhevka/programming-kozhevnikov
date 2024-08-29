@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab 15: Динамічні масиви: Лабораторна робота №15: Динамічні масиви</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lab 15: Динамічні масиви
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота, що демонструє роботу з масивами</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Лабораторна робота №15: Динамічні масиви </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Студент</h1>
+<ul>
+<li><b>Ім'я:</b> Кожевніков Ілля Володимирович</li>
+<li><b>Група:</b> КН-923в</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Завдання</h1>
+<p>Розробити програму, яка працює з динамічним масивом структур <code><a class="el" href="structCar.html" title="Структура для зберігання інформації про автомобіль.">Car</a></code>. Програма повинна забезпечувати:</p><ul>
+<li>Вивід вмісту списку на екран.</li>
+<li>Реалізацію функції пошуку за брендом.</li>
+<li>Додавання об'єкта у кінець списку.</li>
+<li>Видалення об'єкта зі списку за індексом.</li>
+<li>Сортування вмісту списку за ціною.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Опис програми</h1>
+<p>Програма складається з таких компонентів:</p><ol type="1">
+<li><b><a class="el" href="main_8c.html" title="Головний файл програми для роботи з динамічним масивом структур Car.">src/main.c</a></b>: Головний файл програми, який містить точку входу <code><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="Головна функція програми.">main()</a></code> і основну логіку програми.</li>
+<li><b><a class="el" href="entity_8c.html" title="Реалізація функцій, специфічних для Car (поки що не використовується).">src/entity.c</a>, <a class="el" href="entity_8h.html" title="Опис структури Car.">src/entity.h</a></b>: Файли, які містять структуру <code><a class="el" href="structCar.html" title="Структура для зберігання інформації про автомобіль.">Car</a></code>.</li>
+<li><b><a class="el" href="list_8c.html" title="Реалізація функцій для роботи з динамічним масивом CarList.">src/list.c</a>, <a class="el" href="list_8h.html" title="Оголошення функцій для роботи з динамічним масивом CarList.">src/list.h</a></b>: Файли, які містять функції для роботи з динамічним масивом <code><a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a></code>.</li>
+<li><b>test/test.c</b>: Файл, який містить функції для автоматичного тестування програми.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Використання програми</h1>
+<ol type="1">
+<li><b>Компіляція</b>: Виконайте команду <code>make</code>, щоб скомпілювати проект.</li>
+<li><b>Запуск основної програми</b>: Використовуйте команду <code>./lab15 &lt;input file&gt;</code>, де <code>&lt;input file&gt;</code> - це ваш файл з вхідними даними.</li>
+<li><b>Тестування</b>: Виконайте команду <code>make test</code>, щоб автоматично запустити тести.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Важливі зауваження</h1>
+<ul>
+<li>Передбачається, що вхідні дані у файлі <code>input.txt</code> містять коректні значення для полів <code>brand</code>, <code>model</code>, <code>year</code> та <code>price</code>.</li>
+<li>У разі некоректних вхідних даних програма може працювати некоректно або навіть завершитися з помилкою.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Завершення</h1>
+<p>Ця програма дозволяє працювати з динамічним масивом структур <code><a class="el" href="structCar.html" title="Структура для зберігання інформації про автомобіль.">Car</a></code>, забезпечуючи основні функції для додавання, видалення, сортування та пошуку даних. Вона також підтримує автоматичне тестування для перевірки правильності функцій. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

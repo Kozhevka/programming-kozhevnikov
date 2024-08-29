@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab 14: Структуровані типи даних: Лабораторна робота №14: Структуровані типи даних</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lab 14: Структуровані типи даних
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота, що демонструє роботу з структурованими типами даних у C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Лабораторна робота №14: Структуровані типи даних </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Студент</h1>
+<ul>
+<li><b>Ім'я:</b> Кожевніков Ілля Володимирович</li>
+<li><b>Група:</b> КН-923в</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Завдання</h1>
+<p>Розробити програму, яка працює з масивом структур <code><a class="el" href="structCar.html" title="Структура, що представляє автомобіль">Car</a></code>. Програма повинна забезпечувати читання даних з файлу, виведення їх на екран, сортування за ціною, пошук за брендом, а також роботу з бінарними файлами.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Опис програми</h1>
+<p>Програма складається з таких компонентів:</p><ol type="1">
+<li><b><a class="el" href="main_8c.html">src/main.c</a></b>: Головний файл програми, який містить точку входу <code><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="Головна функція програми">main()</a></code> і основну логіку програми.</li>
+<li><b><a class="el" href="lib_8c.html">src/lib.c</a>, <a class="el" href="lib_8h.html">src/lib.h</a></b>: Файли, які містять функції для роботи з даними. <code><a class="el" href="lib_8h.html">lib.h</a></code> містить прототипи цих функцій, а <code><a class="el" href="lib_8c.html">lib.c</a></code> - їхні реалізації.</li>
+<li><b>test/test.c</b>: Файл, який містить функції для автоматичного тестування програми.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Використання програми</h1>
+<ol type="1">
+<li><b>Компіляція</b>: Виконайте команду <code>make</code>, щоб скомпілювати проект.</li>
+<li><b>Запуск основної програми</b>: Використовуйте команду <code>./lab14 &lt;input file&gt;</code>, де <code>&lt;input file&gt;</code> - це ваш файл з вхідними даними. <div class="fragment"><div class="line">Brand: Toyota, Model: Camry, Year: 2010, Price: 15000.00</div>
+<div class="line">Brand: Ford, Model: Focus, Year: 2012, Price: 12000.00</div>
+<div class="line">Brand: Honda, Model: Civic, Year: 2015, Price: 18000.00</div>
+<div class="line">Brand: Toyota, Model: Corolla, Year: 2011, Price: 14000.00</div>
+<div class="line">Brand: Ford, Model: Mustang, Year: 2018, Price: 30000.00</div>
+<div class="line"> </div>
+<div class="line">Searching for brand &#39;Ford&#39;:</div>
+<div class="line">Brand: Ford, Model: Focus, Year: 2012, Price: 12000.00</div>
+<div class="line">Brand: Ford, Model: Mustang, Year: 2018, Price: 30000.00</div>
+<div class="line"> </div>
+<div class="line">Sorting cars by price:</div>
+<div class="line">Brand: Ford, Model: Focus, Year: 2012, Price: 12000.00</div>
+<div class="line">Brand: Toyota, Model: Corolla, Year: 2011, Price: 14000.00</div>
+<div class="line">Brand: Toyota, Model: Camry, Year: 2010, Price: 15000.00</div>
+<div class="line">Brand: Honda, Model: Civic, Year: 2015, Price: 18000.00</div>
+<div class="line">Brand: Ford, Model: Mustang, Year: 2018, Price: 30000.00</div>
+<div class="line"> </div>
+<div class="line">Data read from binary file:</div>
+<div class="line">Brand: Ford, Model: Focus, Year: 2012, Price: 12000.00</div>
+<div class="line">Brand: Toyota, Model: Corolla, Year: 2011, Price: 14000.00</div>
+<div class="line">Brand: Toyota, Model: Camry, Year: 2010, Price: 15000.00</div>
+<div class="line">Brand: Honda, Model: Civic, Year: 2015, Price: 18000.00</div>
+<div class="line">Brand: Ford, Model: Mustang, Year: 2018, Price: 30000.00</div>
+</div><!-- fragment --></li>
+</ol>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Важливі зауваження</h1>
+<ul>
+<li>Передбачається, що вхідні дані у файлі <code>input.txt</code> містять коректні значення для полів <code>brand</code>, <code>model</code>, <code>year</code> та <code>price</code>.</li>
+<li>У разі некоректних вхідних даних програма може працювати некоректно або навіть завершитися з помилкою.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Завершення</h1>
+<p>Ця програма дозволяє працювати з масивом структур <code><a class="el" href="structCar.html" title="Структура, що представляє автомобіль">Car</a></code>, забезпечуючи основні функції для читання, запису, сортування та пошуку даних. Вона також підтримує роботу з бінарними файлами для більш ефективного зберігання даних. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

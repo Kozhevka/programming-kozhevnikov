@@ -1,0 +1,465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab 15: Динамічні масиви: Файл src/list.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lab 15: Динамічні масиви
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Лабораторна робота, що демонструє роботу з масивами</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл list.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Реалізація функцій для роботи з динамічним масивом <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>.  
+<a href="#details">Детальніше...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="list_8h_source.html">list.h</a>&quot;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для list.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="list_8c__incl.png" border="0" usemap="#asrc_2list_8c" alt=""/></div>
+<map name="asrc_2list_8c" id="asrc_2list_8c">
+<area shape="rect" title="Реалізація функцій для роботи з динамічним масивом CarList." alt="" coords="183,5,259,32"/>
+<area shape="rect" href="list_8h.html" title="Оголошення функцій для роботи з динамічним масивом CarList." alt="" coords="61,80,116,107"/>
+<area shape="rect" title=" " alt="" coords="141,80,207,107"/>
+<area shape="rect" title=" " alt="" coords="232,80,303,107"/>
+<area shape="rect" title=" " alt="" coords="327,80,397,107"/>
+<area shape="rect" href="entity_8h.html" title="Опис структури Car." alt="" coords="5,155,76,181"/>
+<area shape="rect" title=" " alt="" coords="101,155,175,181"/>
+</map>
+</div>
+</div>
+<p><a href="list_8c_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:a9fc36f2693c98743880072996849d620"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#a9fc36f2693c98743880072996849d620">initList</a> (<a class="el" href="structCarList.html">CarList</a> *list)</td></tr>
+<tr class="memdesc:a9fc36f2693c98743880072996849d620"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ініціалізує динамічний масив <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>.  <a href="list_8c.html#a9fc36f2693c98743880072996849d620">Детальніше...</a><br /></td></tr>
+<tr class="separator:a9fc36f2693c98743880072996849d620"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae70951e3d82aaca3b85d863e226f6ff8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#ae70951e3d82aaca3b85d863e226f6ff8">freeList</a> (<a class="el" href="structCarList.html">CarList</a> *list)</td></tr>
+<tr class="memdesc:ae70951e3d82aaca3b85d863e226f6ff8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Звільняє пам'ять, зайняту масивом <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>.  <a href="list_8c.html#ae70951e3d82aaca3b85d863e226f6ff8">Детальніше...</a><br /></td></tr>
+<tr class="separator:ae70951e3d82aaca3b85d863e226f6ff8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e6919eb6850297f54af4112aea5262"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#a41e6919eb6850297f54af4112aea5262">addCar</a> (<a class="el" href="structCarList.html">CarList</a> *list, <a class="el" href="structCar.html">Car</a> car)</td></tr>
+<tr class="memdesc:a41e6919eb6850297f54af4112aea5262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Додає новий автомобіль до масиву <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>.  <a href="list_8c.html#a41e6919eb6850297f54af4112aea5262">Детальніше...</a><br /></td></tr>
+<tr class="separator:a41e6919eb6850297f54af4112aea5262"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af474de0fc4a5e6620ea5e90832a5f8af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#af474de0fc4a5e6620ea5e90832a5f8af">removeCar</a> (<a class="el" href="structCarList.html">CarList</a> *list, size_t index)</td></tr>
+<tr class="memdesc:af474de0fc4a5e6620ea5e90832a5f8af"><td class="mdescLeft">&#160;</td><td class="mdescRight">Видаляє автомобіль з масиву <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a> за індексом.  <a href="list_8c.html#af474de0fc4a5e6620ea5e90832a5f8af">Детальніше...</a><br /></td></tr>
+<tr class="separator:af474de0fc4a5e6620ea5e90832a5f8af"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac14657ae451af217e03d8253b1e64301"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#ac14657ae451af217e03d8253b1e64301">printList</a> (const <a class="el" href="structCarList.html">CarList</a> *list)</td></tr>
+<tr class="memdesc:ac14657ae451af217e03d8253b1e64301"><td class="mdescLeft">&#160;</td><td class="mdescRight">Виводить список автомобілів на екран.  <a href="list_8c.html#ac14657ae451af217e03d8253b1e64301">Детальніше...</a><br /></td></tr>
+<tr class="separator:ac14657ae451af217e03d8253b1e64301"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa115ede1fc944f757a82ad0a8bf03b98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#aa115ede1fc944f757a82ad0a8bf03b98">compareByPrice</a> (const void *a, const void *b)</td></tr>
+<tr class="memdesc:aa115ede1fc944f757a82ad0a8bf03b98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Порівнює два автомобілі за ціною.  <a href="list_8c.html#aa115ede1fc944f757a82ad0a8bf03b98">Детальніше...</a><br /></td></tr>
+<tr class="separator:aa115ede1fc944f757a82ad0a8bf03b98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c46db8a73664e2138ab7da0609fc105"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#a4c46db8a73664e2138ab7da0609fc105">sortListByPrice</a> (<a class="el" href="structCarList.html">CarList</a> *list)</td></tr>
+<tr class="memdesc:a4c46db8a73664e2138ab7da0609fc105"><td class="mdescLeft">&#160;</td><td class="mdescRight">Сортує автомобілі за ціною.  <a href="list_8c.html#a4c46db8a73664e2138ab7da0609fc105">Детальніше...</a><br /></td></tr>
+<tr class="separator:a4c46db8a73664e2138ab7da0609fc105"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5eae88822d0aa1c39eaf742356a65c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="list_8c.html#af5eae88822d0aa1c39eaf742356a65c4">searchByBrand</a> (const <a class="el" href="structCarList.html">CarList</a> *list, const char *brand)</td></tr>
+<tr class="memdesc:af5eae88822d0aa1c39eaf742356a65c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Шукає автомобілі за маркою.  <a href="list_8c.html#af5eae88822d0aa1c39eaf742356a65c4">Детальніше...</a><br /></td></tr>
+<tr class="separator:af5eae88822d0aa1c39eaf742356a65c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Реалізація функцій для роботи з динамічним масивом <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a></p>
+</div><h2 class="groupheader">Опис функцій</h2>
+<a id="a41e6919eb6850297f54af4112aea5262"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41e6919eb6850297f54af4112aea5262">&#9670;&nbsp;</a></span>addCar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void addCar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structCar.html">Car</a>&#160;</td>
+          <td class="paramname"><em>car</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Додає новий автомобіль до масиву <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+    <tr><td class="paramname">car</td><td>Автомобіль для додавання. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00036">36</a></p>
+<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                                    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">if</span> (list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a> &gt;= list-&gt;<a class="code" href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">capacity</a>) {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        list-&gt;<a class="code" href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">capacity</a> *= 2;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a> = (<a class="code" href="structCar.html">Car</a> *)realloc(list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>, list-&gt;<a class="code" href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">capacity</a> * <span class="keyword">sizeof</span>(<a class="code" href="structCar.html">Car</a>));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a>++] = car;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
+<div class="ttc" id="astructCarList_html_a8abc7bae5aa3bcb1d8f04be67b609a67"><div class="ttname"><a href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">CarList::size</a></div><div class="ttdeci">size_t size</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00017">list.h:17</a></div></div>
+<div class="ttc" id="astructCarList_html_ac60ab9a50242282397790af606cd1c4e"><div class="ttname"><a href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">CarList::data</a></div><div class="ttdeci">Car * data</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00016">list.h:16</a></div></div>
+<div class="ttc" id="astructCarList_html_adaa27d2346833fd4f2897c51f639655f"><div class="ttname"><a href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">CarList::capacity</a></div><div class="ttdeci">size_t capacity</div><div class="ttdef"><b>Definition:</b> <a href="list_8h_source.html#l00018">list.h:18</a></div></div>
+<div class="ttc" id="astructCar_html"><div class="ttname"><a href="structCar.html">Car</a></div><div class="ttdoc">Структура для зберігання інформації про автомобіль.</div><div class="ttdef"><b>Definition:</b> <a href="entity_8h_source.html#l00012">entity.h:12</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa115ede1fc944f757a82ad0a8bf03b98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa115ede1fc944f757a82ad0a8bf03b98">&#9670;&nbsp;</a></span>compareByPrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int compareByPrice </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>a</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>b</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Порівнює два автомобілі за ціною. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">a</td><td>Вказівник на перший автомобіль. </td></tr>
+    <tr><td class="paramname">b</td><td>Вказівник на другий автомобіль. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Повертає</dt><dd>Результат порівняння. </dd></dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00076">76</a></p>
+<div class="fragment"><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                                                 {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <a class="code" href="structCar.html">Car</a> *carA = (<a class="code" href="structCar.html">Car</a> *)a;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <a class="code" href="structCar.html">Car</a> *carB = (<a class="code" href="structCar.html">Car</a> *)b;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordflow">return</span> (carA-&gt;<a class="code" href="structCar.html#aa86a9c597dc714caa6befd602e60c013">price</a> &gt; carB-&gt;<a class="code" href="structCar.html#aa86a9c597dc714caa6befd602e60c013">price</a>) - (carA-&gt;<a class="code" href="structCar.html#aa86a9c597dc714caa6befd602e60c013">price</a> &lt; carB-&gt;<a class="code" href="structCar.html#aa86a9c597dc714caa6befd602e60c013">price</a>);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="ttc" id="astructCar_html_aa86a9c597dc714caa6befd602e60c013"><div class="ttname"><a href="structCar.html#aa86a9c597dc714caa6befd602e60c013">Car::price</a></div><div class="ttdeci">double price</div><div class="ttdef"><b>Definition:</b> <a href="entity_8h_source.html#l00016">entity.h:16</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae70951e3d82aaca3b85d863e226f6ff8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae70951e3d82aaca3b85d863e226f6ff8">&#9670;&nbsp;</a></span>freeList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void freeList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Звільняє пам'ять, зайняту масивом <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00025">25</a></p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                             {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    free(list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a> = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    list-&gt;<a class="code" href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">capacity</a> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9fc36f2693c98743880072996849d620"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fc36f2693c98743880072996849d620">&#9670;&nbsp;</a></span>initList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Ініціалізує динамічний масив <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00015">15</a></p>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;                             {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a> = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    list-&gt;<a class="code" href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">capacity</a> = 2;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a> = (<a class="code" href="structCar.html">Car</a> *)malloc(list-&gt;<a class="code" href="structCarList.html#adaa27d2346833fd4f2897c51f639655f">capacity</a> * <span class="keyword">sizeof</span>(<a class="code" href="structCar.html">Car</a>));</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac14657ae451af217e03d8253b1e64301"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac14657ae451af217e03d8253b1e64301">&#9670;&nbsp;</a></span>printList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printList </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Виводить список автомобілів на екран. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00062">62</a></p>
+<div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                    {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a>; ++i) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        printf(<span class="stringliteral">&quot;Brand: %s, Model: %s, Year: %d, Price: %.2f\n&quot;</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;               list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a70257fcd0a48930ce56ec43ccb96ff04">brand</a>, list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a5f611a971e4028937be9c6b144e2751b">model</a>,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;               list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a735012fb07f61a4b740838640f6969c7">year</a>, list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#aa86a9c597dc714caa6befd602e60c013">price</a>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="ttc" id="astructCar_html_a5f611a971e4028937be9c6b144e2751b"><div class="ttname"><a href="structCar.html#a5f611a971e4028937be9c6b144e2751b">Car::model</a></div><div class="ttdeci">char model[50]</div><div class="ttdef"><b>Definition:</b> <a href="entity_8h_source.html#l00014">entity.h:14</a></div></div>
+<div class="ttc" id="astructCar_html_a70257fcd0a48930ce56ec43ccb96ff04"><div class="ttname"><a href="structCar.html#a70257fcd0a48930ce56ec43ccb96ff04">Car::brand</a></div><div class="ttdeci">char brand[50]</div><div class="ttdef"><b>Definition:</b> <a href="entity_8h_source.html#l00013">entity.h:13</a></div></div>
+<div class="ttc" id="astructCar_html_a735012fb07f61a4b740838640f6969c7"><div class="ttname"><a href="structCar.html#a735012fb07f61a4b740838640f6969c7">Car::year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> <a href="entity_8h_source.html#l00015">entity.h:15</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af474de0fc4a5e6620ea5e90832a5f8af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af474de0fc4a5e6620ea5e90832a5f8af">&#9670;&nbsp;</a></span>removeCar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void removeCar </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Видаляє автомобіль з масиву <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a> за індексом. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+    <tr><td class="paramname">index</td><td>Індекс автомобіля для видалення. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00049">49</a></p>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                                            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">if</span> (index &lt; list-&gt;size) {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = index; i &lt; list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a> - 1; ++i) {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i] = list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i + 1];</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a>--;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af5eae88822d0aa1c39eaf742356a65c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5eae88822d0aa1c39eaf742356a65c4">&#9670;&nbsp;</a></span>searchByBrand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void searchByBrand </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>brand</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Шукає автомобілі за маркою. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+    <tr><td class="paramname">brand</td><td>Марка автомобіля для пошуку. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00095">95</a></p>
+<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                                           {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">size_t</span> i = 0; i &lt; list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a>; ++i) {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">if</span> (strcmp(list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a70257fcd0a48930ce56ec43ccb96ff04">brand</a>, brand) == 0) {</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            printf(<span class="stringliteral">&quot;Brand: %s, Model: %s, Year: %d, Price: %.2f\n&quot;</span>,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                   list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a70257fcd0a48930ce56ec43ccb96ff04">brand</a>, list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a5f611a971e4028937be9c6b144e2751b">model</a>,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                   list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#a735012fb07f61a4b740838640f6969c7">year</a>, list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>[i].<a class="code" href="structCar.html#aa86a9c597dc714caa6befd602e60c013">price</a>);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c46db8a73664e2138ab7da0609fc105"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c46db8a73664e2138ab7da0609fc105">&#9670;&nbsp;</a></span>sortListByPrice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sortListByPrice </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structCarList.html">CarList</a> *&#160;</td>
+          <td class="paramname"><em>list</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Сортує автомобілі за ціною. </p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">list</td><td>Вказівник на <a class="el" href="structCarList.html" title="Структура для зберігання динамічного масиву автомобілів.">CarList</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="list_8c_source.html">list.c</a>, рядок <a class="el" href="list_8c_source.html#l00086">86</a></p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    qsort(list-&gt;<a class="code" href="structCarList.html#ac60ab9a50242282397790af606cd1c4e">data</a>, list-&gt;<a class="code" href="structCarList.html#a8abc7bae5aa3bcb1d8f04be67b609a67">size</a>, <span class="keyword">sizeof</span>(<a class="code" href="structCar.html">Car</a>), <a class="code" href="list_8c.html#aa115ede1fc944f757a82ad0a8bf03b98">compareByPrice</a>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;}</div>
+<div class="ttc" id="alist_8c_html_aa115ede1fc944f757a82ad0a8bf03b98"><div class="ttname"><a href="list_8c.html#aa115ede1fc944f757a82ad0a8bf03b98">compareByPrice</a></div><div class="ttdeci">int compareByPrice(const void *a, const void *b)</div><div class="ttdoc">Порівнює два автомобілі за ціною.</div><div class="ttdef"><b>Definition:</b> <a href="list_8c_source.html#l00076">list.c:76</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

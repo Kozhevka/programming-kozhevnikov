@@ -1,0 +1,40 @@
+# Doxyfile configuration for generating HTML documentation
+
+# Project related settings
+PROJECT_NAME           = "Lab 15: Динамічні масиви"
+PROJECT_NUMBER         = "1.0"
+PROJECT_BRIEF          = "Лабораторна робота, що демонструє роботу з масивами"
+OUTPUT_DIRECTORY       = "doc"
+OUTPUT_LANGUAGE        = "Ukrainian"
+EXTRACT_ALL            = YES
+RECURSIVE              = YES
+
+# Build related settings
+GENERATE_HTML          = YES
+HTML_OUTPUT            = "html"
+GENERATE_LATEX         = NO
+
+# Input related settings
+INPUT                  = "src" "README.md"
+FILE_PATTERNS          = "*.c" "*.h" "README.md"
+EXAMPLE_PATH           = "assets"
+EXAMPLE_PATTERNS       = "*.txt"
+
+# Source browser related settings
+SOURCE_BROWSER         = YES
+INLINE_SOURCES         = YES
+
+# Extraction related settings
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+EXTRACT_LOCAL_CLASSES  = YES
+EXTRACT_LOCAL_METHODS  = YES
+
+# Preprocessor related settings
+ENABLE_PREPROCESSING   = YES
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = NO
+
+# External tool settings
+CLASS_DIAGRAMS         = NO
+

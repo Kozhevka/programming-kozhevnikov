@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab 13: Взаємодія з файлами: Файл src/lib.c</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lab 13: Взаємодія з файлами
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Laboratory work demonstrating file operations and directory structure traversal in C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Функції</a>  </div>
+  <div class="headertitle">
+<div class="title">Файл lib.c</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Реалізація функцій для обходу структури директорій.  
+<a href="#details">Детальніше...</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;dirent.h&gt;</code><br />
+<code>#include &lt;string.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/stat.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="lib_8h_source.html">lib.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Діаграма включених заголовочних файлів для lib.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="lib_8c__incl.png" border="0" usemap="#asrc_2lib_8c" alt=""/></div>
+<map name="asrc_2lib_8c" id="asrc_2lib_8c">
+<area shape="rect" title="Реалізація функцій для обходу структури директорій." alt="" coords="341,5,413,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,72,107"/>
+<area shape="rect" title=" " alt="" coords="97,80,167,107"/>
+<area shape="rect" title=" " alt="" coords="192,80,264,107"/>
+<area shape="rect" title=" " alt="" coords="289,80,359,107"/>
+<area shape="rect" title=" " alt="" coords="384,80,480,107"/>
+<area shape="rect" title=" " alt="" coords="504,80,589,107"/>
+<area shape="rect" title=" " alt="" coords="613,80,688,107"/>
+<area shape="rect" href="lib_8h.html" title="Заголовний файл для функцій обходу структури директорій." alt="" coords="712,80,763,107"/>
+</map>
+</div>
+</div>
+<p><a href="lib_8c_source.html">Див. вихідні тексти.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Функції</h2></td></tr>
+<tr class="memitem:ab011e117a41dafa783abcd986a77345d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8c.html#ab011e117a41dafa783abcd986a77345d">print_directory_structure</a> (const char *path, FILE *output_fp)</td></tr>
+<tr class="memdesc:ab011e117a41dafa783abcd986a77345d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вивести структуру директорій, починаючи з вказаного шляху.  <a href="lib_8c.html#ab011e117a41dafa783abcd986a77345d">Детальніше...</a><br /></td></tr>
+<tr class="separator:ab011e117a41dafa783abcd986a77345d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a15dec408c078b1b530babd39d72c1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="lib_8c.html#a34a15dec408c078b1b530babd39d72c1">traverse_directory</a> (const char *path, FILE *output_fp, int level)</td></tr>
+<tr class="memdesc:a34a15dec408c078b1b530babd39d72c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Рекурсивний обхід директорії та виведення її структури.  <a href="lib_8c.html#a34a15dec408c078b1b530babd39d72c1">Детальніше...</a><br /></td></tr>
+<tr class="separator:a34a15dec408c078b1b530babd39d72c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Детальний опис</h2>
+<div class="textblock"><p>Реалізація функцій для обходу структури директорій. </p>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="lib_8c_source.html">lib.c</a></p>
+</div><h2 class="groupheader">Опис функцій</h2>
+<a id="ab011e117a41dafa783abcd986a77345d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab011e117a41dafa783abcd986a77345d">&#9670;&nbsp;</a></span>print_directory_structure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_directory_structure </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>output_fp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Вивести структуру директорій, починаючи з вказаного шляху. </p>
+<p>Ця функція ініціює обхід дерева директорій.</p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Початковий шлях до дерева директорій. </td></tr>
+    <tr><td class="paramname">output_fp</td><td>Вказівник на файл для запису, де буде записана структура. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="lib_8c_source.html">lib.c</a>, рядок <a class="el" href="lib_8c_source.html#l00024">24</a></p>
+<div class="fragment"><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                                                                  {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="lib_8c.html#a34a15dec408c078b1b530babd39d72c1">traverse_directory</a>(path, output_fp, 0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="ttc" id="alib_8c_html_a34a15dec408c078b1b530babd39d72c1"><div class="ttname"><a href="lib_8c.html#a34a15dec408c078b1b530babd39d72c1">traverse_directory</a></div><div class="ttdeci">void traverse_directory(const char *path, FILE *output_fp, int level)</div><div class="ttdoc">Рекурсивний обхід директорії та виведення її структури.</div><div class="ttdef"><b>Definition:</b> <a href="lib_8c_source.html#l00039">lib.c:39</a></div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a34a15dec408c078b1b530babd39d72c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a15dec408c078b1b530babd39d72c1">&#9670;&nbsp;</a></span>traverse_directory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void traverse_directory </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>output_fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Рекурсивний обхід директорії та виведення її структури. </p>
+<p>Ця функція рекурсивно обходить дерево директорій, виводячи кожну директорію та файл з відступами для представлення структури.</p>
+<dl class="params"><dt>Аргументи</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">path</td><td>Поточний шлях у дереві директорій. </td></tr>
+    <tr><td class="paramname">output_fp</td><td>Вказівник на файл для запису, де буде записана структура. </td></tr>
+    <tr><td class="paramname">level</td><td>Поточний рівень відступів (глибина у дереві директорій). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Див. визначення в файлі <a class="el" href="lib_8c_source.html">lib.c</a>, рядок <a class="el" href="lib_8c_source.html#l00039">39</a></p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                                                                      {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    DIR *dir;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">struct </span>dirent *entry;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">struct </span>stat entry_stat;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">char</span> new_path[1024];</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">if</span> (!(dir = opendir(path))) <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">while</span> ((entry = readdir(dir)) != NULL) {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (strcmp(entry-&gt;d_name, <span class="stringliteral">&quot;.&quot;</span>) == 0 || strcmp(entry-&gt;d_name, <span class="stringliteral">&quot;..&quot;</span>) == 0)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        snprintf(new_path, <span class="keyword">sizeof</span>(new_path), <span class="stringliteral">&quot;%s/%s&quot;</span>, path, entry-&gt;d_name);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        stat(new_path, &amp;entry_stat);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; level; i++) {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            fprintf(output_fp, <span class="stringliteral">&quot;    &quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (S_ISDIR(entry_stat.st_mode)) {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            fprintf(output_fp, <span class="stringliteral">&quot;%s/\n&quot;</span>, entry-&gt;d_name);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <a class="code" href="lib_8c.html#a34a15dec408c078b1b530babd39d72c1">traverse_directory</a>(new_path, output_fp, level + 1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            fprintf(output_fp, <span class="stringliteral">&quot;%s\n&quot;</span>, entry-&gt;d_name);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    closedir(dir);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

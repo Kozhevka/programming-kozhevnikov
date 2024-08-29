@@ -1,0 +1,23 @@
+# Doxyfile 1.9.2
+
+# Project related settings
+PROJECT_NAME           = "Лабораторна робота №16"
+PROJECT_BRIEF          = "Динамічні списки"
+OUTPUT_DIRECTORY       = doc
+OUTPUT_LANGUAGE        = Ukrainian
+
+# Build related settings
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# Input related settings
+INPUT                  = src
+FILE_PATTERNS          = *.c *.h
+
+# HTML related settings
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# LaTeX related settings
+GENERATE_LATEX         = NO

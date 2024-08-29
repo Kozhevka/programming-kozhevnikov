@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab 13: Взаємодія з файлами: Лабораторна робота №13: Взаємодія з файлами</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lab 13: Взаємодія з файлами
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Laboratory work demonstrating file operations and directory structure traversal in C</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Створено системою Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Пошук','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Пошук');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">Лабораторна робота №13: Взаємодія з файлами </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h1><a class="anchor" id="autotoc_md1"></a>
+Студент</h1>
+<ul>
+<li><b>Ім'я:</b> Кожевніков Ілля Володимирович</li>
+<li><b>Група:</b> КН-923в</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Завдання</h1>
+<p>Розробити програму, яка виводить структуру файлів та каталогів подібно до утиліти <code>tree</code>. Ім'я вхідного файлу та результуючого файлу повинно отримуватися від користувача за допомогою аргументів додатку.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Опис програми</h1>
+<p>Програма складається з таких компонентів:</p><ol type="1">
+<li><b><a class="el" href="main_8c.html" title="Головний файл програми для обходу структури директорій.">src/main.c</a></b>: Головний файл програми, який містить точку входу <code><a class="el" href="main_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="Головна точка входу програми.">main()</a></code> і основну логіку програми. Зчитує вхідні дані з файлу, виводить структуру каталогів та записує її у вихідний файл.</li>
+<li><b><a class="el" href="lib_8c.html" title="Реалізація функцій для обходу структури директорій.">src/lib.c</a>, <a class="el" href="lib_8h.html" title="Заголовний файл для функцій обходу структури директорій.">src/lib.h</a></b>: Файли, які містять функції для роботи з файлами та для створення структури каталогів. <code><a class="el" href="lib_8h.html" title="Заголовний файл для функцій обходу структури директорій.">lib.h</a></code> містить прототипи цих функцій, а <code><a class="el" href="lib_8c.html" title="Реалізація функцій для обходу структури директорій.">lib.c</a></code> - їхні реалізації.</li>
+<li><b>test/test.c</b>: Файл, який містить функції для автоматичного тестування програми.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Використання програми</h1>
+<ol type="1">
+<li><b>Компіляція</b>: Виконайте команду <code>make</code>, щоб скомпілювати проект.</li>
+<li><b>Тестування</b>: Виконайте команду <code>make test</code>, щоб автоматично запустити тести.</li>
+<li><b>Запуск з власними даними</b>: Використовуйте команду <code>./bin/main "./assets/input.txt" "output.txt"</code>, де <code>input.txt</code> - це ваш файл з вхідними даними, а <code>output.txt</code> - файл, у який буде записано результат.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Важливі зауваження</h1>
+<ul>
+<li>Передбачається, що вхідні дані у файлі <code>input.txt</code> містять коректний шлях до каталогу.</li>
+<li>У разі некоректних вхідних даних програма може працювати некоректно або навіть завершитися з помилкою.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Завершення</h1>
+<p>Ця програма дозволяє вивести структуру каталогів і файлів у вказаному каталозі, подібно до утиліти <code>tree</code>, і записувати її у файл. Це може бути корисним для створення текстових представлень файлових структур. </p>
+</div></div><!-- contents -->
+</div><!-- PageDoc -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Створено системою&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
